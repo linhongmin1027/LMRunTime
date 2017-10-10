@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     LMAccount *account=[[LMAccount alloc]init];
-    account.age=@"18";
+    account.age=@"20";
+    NSLog(@"22222");
     [account saveAccount];
 }
 
