@@ -89,7 +89,7 @@ s.description  = "a demo for Runtime"
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = ""RunTime/**/*.{h,m}"
+  s.source_files  = ""RLMRunTime/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

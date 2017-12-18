@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1B160376B62271EB95E965 /* libPods-LMRunTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A66DA5B37C16C84CBDBAFC /* libPods-LMRunTime.a */; };
 		6A6C1D471EF8BE790066E478 /* LMAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C1D461EF8BE790066E478 /* LMAccount.m */; };
 		6A6C1D4B1EF8D4A80066E478 /* UIButton+LMEnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C1D4A1EF8D4A80066E478 /* UIButton+LMEnlargeTouchArea.m */; };
 		6A6C1D4E1EF8E46F0066E478 /* LMFirstContrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C1D4D1EF8E46F0066E478 /* LMFirstContrViewController.m */; };
@@ -47,6 +48,9 @@
 		6ABB8ECC1EF7ECAF004611AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ABB8ED31EF7F13F004611AB /* LMArchiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMArchiveModel.h; sourceTree = "<group>"; };
 		6ABB8ED41EF7F13F004611AB /* LMArchiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMArchiveModel.m; sourceTree = "<group>"; };
+		96E1897EAFCAE7F8F2FF972D /* Pods-LMRunTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMRunTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMRunTime/Pods-LMRunTime.debug.xcconfig"; sourceTree = "<group>"; };
+		9E5FBAAAB7404C72581875CA /* Pods-LMRunTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMRunTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-LMRunTime/Pods-LMRunTime.release.xcconfig"; sourceTree = "<group>"; };
+		A5A66DA5B37C16C84CBDBAFC /* libPods-LMRunTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LMRunTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B1B160376B62271EB95E965 /* libPods-LMRunTime.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28C479E27E23C728B4BE5DAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5A66DA5B37C16C84CBDBAFC /* libPods-LMRunTime.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6A6C1D481EF8D4640066E478 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,8 @@
 			children = (
 				6ABB8EBA1EF7ECAF004611AB /* LMRunTime */,
 				6ABB8EB91EF7ECAF004611AB /* Products */,
+				FD270373263D79A34702E8E8 /* Pods */,
+				28C479E27E23C728B4BE5DAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +145,15 @@
 			path = ModelArchive;
 			sourceTree = "<group>";
 		};
+		FD270373263D79A34702E8E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96E1897EAFCAE7F8F2FF972D /* Pods-LMRunTime.debug.xcconfig */,
+				9E5FBAAAB7404C72581875CA /* Pods-LMRunTime.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6ABB8ECF1EF7ECAF004611AB /* Build configuration list for PBXNativeTarget "LMRunTime" */;
 			buildPhases = (
+				212D555D5BA854DB96E5D16F /* [CP] Check Pods Manifest.lock */,
 				6ABB8EB41EF7ECAF004611AB /* Sources */,
 				6ABB8EB51EF7ECAF004611AB /* Frameworks */,
 				6ABB8EB61EF7ECAF004611AB /* Resources */,
+				CEB39C717E719892FE50388C /* [CP] Embed Pods Frameworks */,
+				A1AFDD5A0720E5EBA9589889 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +223,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		212D555D5BA854DB96E5D16F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1AFDD5A0720E5EBA9589889 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMRunTime/Pods-LMRunTime-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEB39C717E719892FE50388C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LMRunTime/Pods-LMRunTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6ABB8EB41EF7ECAF004611AB /* Sources */ = {
@@ -327,6 +402,7 @@
 		};
 		6ABB8ED01EF7ECAF004611AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96E1897EAFCAE7F8F2FF972D /* Pods-LMRunTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LMRunTime/Info.plist;
@@ -338,6 +414,7 @@
 		};
 		6ABB8ED11EF7ECAF004611AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E5FBAAAB7404C72581875CA /* Pods-LMRunTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LMRunTime/Info.plist;
