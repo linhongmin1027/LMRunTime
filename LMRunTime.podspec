@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "LMRunTime"
   s.version      = "0.0.2"
-  s.summary      = "A short description of LMRunTime."
+  s.summary      = "LMRunTime."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -89,8 +89,8 @@ s.description  = "a demo for Runtime"
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = ""RLMRunTime/**/*.{h,m}"
-  # s.exclude_files = "Classes/Exclude"
+  s.source_files  = "RunTime","RunTime/**/*.{h,m}"
+  s.exclude_files = "RunTime/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
